@@ -1,0 +1,128 @@
+Name : RAVIKUMAR RONAD
+Date : 17-02-2023
+Project name: LSB(Least significant Bit)-Steganography.
+-----------------------------------------------------------------------------------------
+
+ravikumar@HP:~/ECEP/C/C-Project-1_08_02_2023_Wed/4-SkeletonCode$ gcc *.c
+ravikumar@HP:~/ECEP/C/C-Project-1_08_02_2023_Wed/4-SkeletonCode$ ./a.out
++---------------------------------------------------------------+
+|Invalid number of arguments                                    |
+|Please pass...                                                 |
+|For Encoding: ./a.out -e beautiful.bmp secret.txt stego.bmp    |
+|For Decoding: ./a.out -d stego.bmp decode.txt                  |
++---------------------------------------------------------------+
+ravikumar@HP:~/ECEP/C/C-Project-1_08_02_2023_Wed/4-SkeletonCode$ ./a.out -e
++---------------------------------------------------------------+
+|               Selected ENCODE operation                       |
+|               *************************                       |
+|                                                               |
+|       ENCODING: Read and validate arguments were Failed       |
+ravikumar@HP:~/ECEP/C/C-Project-1_08_02_2023_Wed/4-SkeletonCode$ ./a.out -e beautiful.bmp
++---------------------------------------------------------------+
+|               Selected ENCODE operation                       |
+|               *************************                       |
+|                                                               |
+|       ENCODING: Read and validate arguments were Failed       |
+ravikumar@HP:~/ECEP/C/C-Project-1_08_02_2023_Wed/4-SkeletonCode$ ./a.out -e beautiful secret.txt
++---------------------------------------------------------------+
+|               Selected ENCODE operation                       |
+|               *************************                       |
+|                                                               |
+|       ENCODING: Read and validate arguments were Failed       |
+ravikumar@HP:~/ECEP/C/C-Project-1_08_02_2023_Wed/4-SkeletonCode$ ls
+Output.h    a.out          common.h  decode.h  encode.h                    secret.txt  test_encode.c
+Output.txt  beautiful.bmp  decode.c  encode.c  sample_io_with_command.txt  stego.bmp   types.h
+ravikumar@HP:~/ECEP/C/C-Project-1_08_02_2023_Wed/4-SkeletonCode$ ./a.out -e beautiful.bmp secret.txt
++---------------------------------------------------------------+
+|               Selected ENCODE operation                       |
+|               *************************                       |
+|                                                               |
+|       ENCODING: Read and validate arguments were successed    |
+|       INFO:---->Files are opened sucessfully.                 |
+|                 Width  = 1024                                 |
+|                 Height = 768                                  |
+|       INFO:---->Check capacity is successfully.               |
+|       INFO:---->Copy header is sucessfully.                   |
+|       INFO:---->Magic string added sucessfully.               |
+|       INFO:---->Extension size is sucessfully.                |
+|       INFO:---->Encoding extension is sucessfully.            |
+|       INFO:---->Encoding secret file size sucessfully.        |
+|       INFO:---->Encoding secret file data sucessfully.        |
+|       INFO:---->Remaining image data is coiped sucessfully.   |
+|       --------ENCODING is Done successfully-------            |
++---------------------------------------------------------------+
+ravikumar@HP:~/ECEP/C/C-Project-1_08_02_2023_Wed/4-SkeletonCode$ ls
+Output.h    a.out          common.h  decode.h  encode.h                    secret.txt  test_encode.c
+Output.txt  beautiful.bmp  decode.c  encode.c  sample_io_with_command.txt  stego.bmp   types.h
+ravikumar@HP:~/ECEP/C/C-Project-1_08_02_2023_Wed/4-SkeletonCode$ ./a.out
++---------------------------------------------------------------+
+|Invalid number of arguments                                    |
+|Please pass...                                                 |
+|For Encoding: ./a.out -e beautiful.bmp secret.txt stego.bmp    |
+|For Decoding: ./a.out -d stego.bmp decode.txt                  |
++---------------------------------------------------------------+
+ravikumar@HP:~/ECEP/C/C-Project-1_08_02_2023_Wed/4-SkeletonCode$ ./a.out -d
++---------------------------------------------------------------+
+|               Selected DECODE operation                       |
+|               **************************                      |
+|                                                               |
+|       DECODING: Read and validate arguments were Failed       |
+ravikumar@HP:~/ECEP/C/C-Project-1_08_02_2023_Wed/4-SkeletonCode$ ./a.out -d stego.bmp encode.h
++---------------------------------------------------------------+
+|               Selected DECODE operation                       |
+|               **************************                      |
+|                                                               |
+|                               encode                          |
+|       DECODING: Read and validate arguments were successed    |
+|       INFO:---->Files are opened sucessfully                  |
+|       INFO:---->Header skipped successfull                    |
+|       INFO:---->Magic string sucesfully                       |
+|       INFO:---->File extension size sucessfully               |
+|       INFO:---->File extension sucessfully                    |
+|       INFO:---->Secret file size sucessfully                  |
+|       INFO:---->Secret file data sucessfully                  |
+|       INFO:---->Transfering data sucesfully                   |
+|       --------DECODING is Done successfully--------           |
++---------------------------------------------------------------+
+ravikumar@HP:~/ECEP/C/C-Project-1_08_02_2023_Wed/4-SkeletonCode$ ls
+Output.h    a.out          common.h  decode.h  encode.h    sample_io_with_command.txt  stego.bmp      types.h
+Output.txt  beautiful.bmp  decode.c  encode.c  encode.txt  secret.txt                  test_encode.c
+ravikumar@HP:~/ECEP/C/C-Project-1_08_02_2023_Wed/4-SkeletonCode$ hd beautiful.bmp | head
+00000000  42 4d 36 00 24 00 00 00  00 00 36 00 00 00 28 00  |BM6.$.....6...(.|
+00000010  00 00 00 04 00 00 00 03  00 00 01 00 18 00 00 00  |................|
+00000020  00 00 00 00 24 00 c4 0e  00 00 c4 0e 00 00 00 00  |....$...........|
+00000030  00 00 00 00 00 00 01 01  01 03 03 03 03 05 05 03  |................|
+00000040  05 05 02 04 04 01 03 03  01 06 05 03 08 07 03 0a  |................|
+00000050  07 00 06 03 00 06 03 00  09 06 02 0b 08 06 0f 0c  |................|
+00000060  04 10 0a 00 09 03 00 04  03 00 03 02 00 04 03 00  |................|
+00000070  08 06 00 0a 07 00 0c 08  00 10 09 02 12 0b 0c 1e  |................|
+00000080  17 03 15 0e 01 11 0a 03  13 0c 05 13 0f 01 0f 0b  |................|
+00000090  01 0c 09 03 11 0b 03 11  0b 04 15 0c 05 14 0c 02  |................|
+ravikumar@HP:~/ECEP/C/C-Project-1_08_02_2023_Wed/4-SkeletonCode$ hd stego.bmp | head
+00000000  42 4d 36 00 24 00 00 00  00 00 36 00 00 00 28 00  |BM6.$.....6...(.|
+00000010  00 00 00 04 00 00 00 03  00 00 01 00 18 00 00 00  |................|
+00000020  00 00 00 00 24 00 c4 0e  00 00 c4 0e 00 00 00 00  |....$...........|
+00000030  00 00 00 00 00 00 01 01  00 02 02 03 02 04 04 03  |................|
+00000040  04 05 02 05 04 00 02 02  01 06 04 02 08 06 02 0a  |................|
+00000050  06 00 06 02 00 06 02 00  08 06 02 0a 08 06 0e 0c  |................|
+00000060  04 10 0a 00 08 02 00 05  03 01 02 03 00 04 02 00  |................|
+00000070  09 06 01 0b 07 00 0c 08  00 11 09 03 13 0a 0c 1e  |................|
+00000080  17 02 15 0f 01 10 0b 02  12 0c 04 12 0f 00 0e 0b  |................|
+00000090  00 0c 08 02 10 0a 02 10  0a 04 14 0c 04 14 0c 02  |................|
+ravikumar@HP:~/ECEP/C/C-Project-1_08_02_2023_Wed/4-SkeletonCode$ ls -l
+total 4720
+-rw-r--r-- 1 ravikumar ravikumar    2519 Feb 16 15:00 Output.h
+-rw-r--r-- 1 ravikumar ravikumar     577 Feb 16 15:11 Output.txt
+-rwxr-xr-x 1 ravikumar ravikumar   27088 Feb 16 15:14 a.out
+-rw-r--r-- 1 ravikumar ravikumar 2359351 Feb  8 09:34 beautiful.bmp
+-rw-r--r-- 1 ravikumar ravikumar     124 Feb 16 15:03 common.h
+-rw-r--r-- 1 ravikumar ravikumar   14525 Feb 16 15:04 decode.c
+-rw-r--r-- 1 ravikumar ravikumar    1992 Feb 16 10:06 decode.h
+-rw-r--r-- 1 ravikumar ravikumar   17875 Feb 16 15:04 encode.c
+-rw-r--r-- 1 ravikumar ravikumar    2519 Feb 16 09:52 encode.h
+-rw-r--r-- 1 ravikumar ravikumar     577 Feb 16 15:16 encode.txt
+-rw-r--r-- 1 ravikumar ravikumar       0 Feb 16 15:13 sample_io_with_command.txt
+-rw-r--r-- 1 ravikumar ravikumar     577 Feb 16 14:49 secret.txt
+-rw-r--r-- 1 ravikumar ravikumar 2359351 Feb 16 15:15 stego.bmp
+-rw-r--r-- 1 ravikumar ravikumar    6174 Feb 16 15:08 test_encode.c
+-rw-r--r-- 1 ravikumar ravikumar     272 Feb 15 14:47 types.h
