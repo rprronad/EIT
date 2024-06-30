@@ -1,0 +1,51 @@
+1) Which command is used for saving and quitting the vi editor simultaneously?
+a) ':x'
+b) :f
+c) :q
+d) :w
+2) Which symbol is used to change permissions for hidden files in Unix?
+a) *
+b) $
+c) &
+d) .
+3) In UNIX, Which command is used to change the permissions of a file?
+a) chown
+b) chgrp
+c) chmod
+d) ch
+4) Which command is used for printing the current working directory?
+a) dir
+b) HOME
+c) cd
+d) pwd
+5) Which command is ued for lisiting files in a directory?
+a) list
+b) ls
+c) wc
+d) ps
+6) Which command is used by the user to change their login password in Unix?
+a) cp 
+b) man
+c) reset
+d) passwd
+7) Which command is used for displaying the contents of a file in Unix?
+a) mkdir
+b) cat
+c) rm
+d) cp
+8) Which command is used to compress files?
+a) gzip
+b) gunzip
+c) comm
+d) cmp
+9) Which command is used to delete all files in a directory?
+a) del *
+b) rm *
+c) mv *
+d) rmdir *
+10) echo command is used for ________
+a) displaying diagnostic messages
+b) displaying date and time 
+c) displaying errors
+d) displaying operating system details
+
